@@ -1,9 +1,9 @@
 import paintings from "./json/paintings.json";
 import PaintingList from "./components/PaintingsList.jsx";
 
-const painting1 = paintings[0];
-const painting2 = paintings[1];
-const painting3 = paintings[2];
+// const painting1 = paintings[0];
+// const painting2 = paintings[1];
+// const painting3 = paintings[2];
 
 export default function App() {
     return (
@@ -33,24 +33,25 @@ export default function App() {
         //         quantity={painting3.quantity}
         //     />
         // </>
-        <div>
-            {/* [1,2,3,4,5]
-            <br />
-            {[1, 2, 3, 4, 5]}
-            <br />
-            {[1, 2, 3, 4, 5].map(el => <div>{el}</div>)}
-            <br /> */}
-            {paintings.map(el => (
-                    <div>
-                        <img src={el.url} alt={el.title} width="480" />
-                        <h2>{el.title}</h2>
-                        <p>Автор: <a href={el.author.url}>{el.author.tag}</a></p>
-                        <p>Цена: {el.price} кредитов</p>
-                        <p>Доступность: {el.quantity}</p>
-                        <button type="button">Додати до кошику</button>
-                    </div>
-                )
-            )}
-        </div>
+        // <div>
+        //     {/* [1,2,3,4,5]
+        //     <br />
+        //     {[1, 2, 3, 4, 5]}
+        //     <br />
+        //     {[1, 2, 3, 4, 5].map(el => <div>{el}</div>)}
+        //     <br /> */}
+        //     {paintings.map(el => (
+        //             <div>
+        //                 <img src={el.url} alt={el.title} width="480" />
+        //                 <h2>{el.title}</h2>
+        //                 <p>Автор: <a href={el.author.url}>{el.author.tag}</a></p>
+        //                 <p>Цена: {el.price} кредитов</p>
+        //                 <p>Доступность: {el.quantity}</p>
+        //                 <button type="button">Додати до кошику</button>
+        //             </div>
+        //         )
+        //     )}
+        // </div>
+        <PaintingList items={paintings}/>
     )
 }
