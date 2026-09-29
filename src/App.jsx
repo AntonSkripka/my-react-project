@@ -1,5 +1,6 @@
 import paintings from "./json/paintings.json";
 import PaintingList from "./components/PaintingsList.jsx";
+import Section from "./components/Section.jsx";
 
 // const painting1 = paintings[0];
 // const painting2 = paintings[1];
@@ -52,6 +53,9 @@ export default function App() {
         //         )
         //     )}
         // </div>
-        <PaintingList items={paintings}/>
+        // <PaintingList items={paintings}/>
+        <Section title={"Список картин"}>
+            <PaintingList items={paintings}/>
+        </Section>
     )
 }
