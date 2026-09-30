@@ -1,12 +1,15 @@
+
 import paintings from "./json/paintings.json";
+import plans from "./json/plans.json";
 import PaintingList from "./components/PaintingsList.jsx";
 import Section from "./components/Section.jsx";
-
+import PlansList from "./components/PlansList.jsx";
 // const painting1 = paintings[0];
 // const painting2 = paintings[1];
 // const painting3 = paintings[2];
 
 export default function App() {
+    const isOnline = false;
     return (
         // <>
         //     <PaintingList
@@ -54,8 +57,21 @@ export default function App() {
         //     )}
         // </div>
         // <PaintingList items={paintings}/>
-        <Section title={"Список картин"}>
+        <>
+        <Section title="Image Collections">
             <PaintingList items={paintings}/>
         </Section>
+        <Section title="Plans Collection">
+            <PlansList items={plans} />
+        </Section>
+        </>
+        // <div>
+        //     {/* {isOnline && "ONline"} */}
+        //     {isOnline ? "ONline" : "OFFline"}
+        //     {false}
+        //     {null}
+        //     {undefined}
+        // </div>
+
     )
 }

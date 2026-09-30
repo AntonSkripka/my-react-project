@@ -19,7 +19,7 @@ export default function PaintingItem({
             <h2>{title}</h2>
             <p>Автор: <a href={profileUrl}>{author}</a></p>
             <p>Цена: {price} кредитов</p>
-            <p>Доступность: {quantity}</p>
+            <p>Доступность: {(quantity > 10) ? " есть в наличии" : " скоро закончится"}</p>
             <button type="button">Додати до кошику</button>
         </>
     )
